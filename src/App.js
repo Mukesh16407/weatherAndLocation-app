@@ -1,10 +1,15 @@
-import './App.css';
-import { Button } from './Components/Button';
+import Aos from "aos";
+import { useEffect } from "react";
+
+import './App.css'
+import {Home} from './Pages/Home'
 
 function App() {
+
+ 
   return (
     <div className="App">
-      <Button/>
+      <Home/>
     </div>
   );
 }
