@@ -1,19 +1,43 @@
-import React from 'react'
+import React from 'react';
+
+import {Search} from '../Components/Search'
 import styled from 'styled-components'
 
 
 const Container = styled.div`
- max-width: 30%;
- height: 93vh;
-  background:white;
-  border-radius: 1.5rem;
+ width: 30%;
+ height: 95vh;
+ background-color:white;
+ border-radius: 20px;
+ box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+`;
+const Wrapper = styled.div`
+ 
+  
+`;
+
+const Box = styled.div`
+  width: 100%;
+`;
+
+const Image = styled.img`
+  width: 100%;
+`;
+
+const Title = styled.h2`
+  color: black;
+  text-align: center;
   padding: 0.5rem;
-  margin:auto;
-  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 `;
 
 export const Home = () => {
   return (
-    <Container>Home</Container>
+    <Container>
+      <Search/>
+      
+      <Wrapper>
+      
+      </Wrapper>
+    </Container>
   )
 }
