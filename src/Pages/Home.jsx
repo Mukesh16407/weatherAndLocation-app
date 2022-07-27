@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import {Search} from '../Components/Search'
 import styled from 'styled-components'
@@ -30,10 +30,17 @@ const Title = styled.h2`
   padding: 0.5rem;
 `;
 
+
 export const Home = () => {
+  const [coordinates, setCoordinates] = useState({});
+  const [dayTemp, setDayTemp] = useState({});
+  const [current, setCurrent] = useState({});
+  const [loading, setLoading] = useState(false);
   return (
     <Container>
-      <Search/>
+      <Search  setLoading={setLoading}
+      setCoordinates={setCoordinates}
+      coordinates={coordinates} />
       
       <Wrapper>
       

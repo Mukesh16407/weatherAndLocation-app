@@ -1,10 +1,10 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import styled from 'styled-components';
 import { ImLocation, ImSearch } from "react-icons/im";
-import {cities} from '../Data/Cities';
-import { CityList } from './CityList';
-import {Coordinates} from '../Location/DefaultLocation';
+import axios from 'axios';
+
+import { GetUserLocation } from './GetUserLocation';
 
 
 const Container = styled.div`
@@ -65,30 +65,30 @@ const Item = styled.div`
 }
 `;
 
-export const Search = () => {
+export const Search = ({ setCoordinates, coordinates, setLoading }) => {
+  
 
-  const [searchData, setSearchData] = useState([]);
-  const [city, setCity] = useState("");
-  const [show, setShow] = useState(true);
-
-
-  let keyWeather="dd7fa73e412e7d4b26a84b058a427602";
-  let id;
+  const currentLocation = () => {
+    GetUserLocation(setCoordinates);
+    console.log("current")
+  };
+  
   return (
     <Container>
-      <Form>
-      <Item style={{ cursor: "pointer" }}>
+      <Form >
+      <Item style={{ cursor: "pointer" }} onClick={currentLocation} >
           <ImLocation />
         </Item>
-        <Input/>
+        <Input  />
         <Button>
           <Item>
             <ImSearch />
           </Item>
         </Button>
       </Form>
+      <GetUserLocation/>
 
-    
+      
   </Container>
   )
 }
