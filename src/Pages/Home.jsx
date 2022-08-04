@@ -1,47 +1,14 @@
 import React from 'react'
 import styled from 'styled-components';
-import { ImLocation, ImSearch } from "react-icons/im";
+import { Search } from '../Components/Search';
+
 
 export const Home = () => {
 
-  const Container = styled.div`
-       
-  min-width: 450px;
-  min-height: 600px;
-  background-color: white;
-  border-radius: 20px;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   
-`
-const Wrapper = styled.div``;
-
-const StyleContainer = styled.div`
- border: 1px solid red;
- margin: 15px;
- height: 50px;
- display: flex;
- justify-content: space-around;
- align-items: center;
- border-radius: 12px;
- box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-`
-const Input = styled.input`
-width: 80%;
-height: 98%;
-`
-const Box = styled.div``
-
-const TemperatureBox = styled.div``;
-const LinearGraph = styled.div``;
-const ExtraData = styled.div``;
-const ParaBolicGraph = styled.div``
   return (
     <Container>
-      <StyleContainer>
-      <ImLocation />
-      <Input/>
-      <ImSearch/>
-      </StyleContainer>
+       <Search/>
       <Box>
         seven day weather
       </Box>
@@ -62,3 +29,61 @@ const ParaBolicGraph = styled.div``
     </Container>
   )
 }
+
+const Container = styled.div`
+       
+  min-width: 450px;
+  min-height: 720px;
+  background-color: white;
+  border-radius: 20px;
+  border:1px solid red;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  
+`
+const Wrapper = styled.div`
+   margin: 12px;
+   padding: 7px;
+    min-height: 72%;
+    border-radius: 15px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+`;
+
+
+const Box = styled.div`
+  border:1px solid red;
+   margin: 12px;
+    height: 110px;
+    padding: 5px;
+    display:flex;
+    justify-content:space-evenly;
+`
+
+const TemperatureBox = styled.div`
+    border:1px solid green;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 8px;
+    height: 75px;
+   
+`;
+const LinearGraph = styled.div`
+border: 1px solid blue;
+    width: 97%;
+    height: 160px;
+    margin: auto;
+`;
+const ExtraData = styled.div`
+  border:1px solid red;
+   display: flex;
+    flex-direction: column;
+    height: 120px;
+    margin: 5px 7px 5px 7px;
+`;
+const ParaBolicGraph = styled.div`
+ border: 1px solid brown;
+    width: 96.5%;
+    height: 130px;
+    margin: auto;
+    padding: 5px;
+`
