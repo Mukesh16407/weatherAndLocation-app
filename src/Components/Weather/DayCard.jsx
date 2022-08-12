@@ -24,7 +24,7 @@ export const DayCard = ({dayData}) => {
         </div>
         <img src={dayData.weather[0].main  ==="Clear" ?sunny
         :dayData.weather[0].main==="Clouds" ?cloudy:rainy}
-        />
+        alt={dayData.weather[0].main}/>
         <div>{dayData.weather[0].main}</div>
     </div>
   )

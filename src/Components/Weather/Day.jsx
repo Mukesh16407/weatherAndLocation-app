@@ -28,7 +28,7 @@ export const Day = ({coordinates,setDayTemp,setCurrent}) => {
             })
             .catch((err) => console.log(err));
         }
-     
+      // eslint-disable-next-line
     },[coordinates]);
     
     const showAllData=(day, i)=>{
@@ -40,7 +40,7 @@ export const Day = ({coordinates,setDayTemp,setCurrent}) => {
         dispatch(addTemp(arr));
         
     }
-    console.log(weeklyData)
+    
   return (
     <div>
         {weeklyData && weeklyData.map((day, i)=>(

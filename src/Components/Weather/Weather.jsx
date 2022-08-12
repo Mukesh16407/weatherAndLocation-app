@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { Day } from './Day';
+import { Details } from './Details';
 import { Search } from './Search'
 
 export const Weather = () => {
@@ -8,6 +9,7 @@ export const Weather = () => {
     const [coordinates, setCoordinates] = useState({});
     const [dayTemp, setDayTemp] = useState({});
     const [current, setCurrent] = useState({});
+    
   return (
     <div>
       <div>
@@ -24,6 +26,7 @@ export const Weather = () => {
         setDayTemp={setDayTemp}
         setCurrent={setCurrent}/>
      </div>
+     <Details dayTemp={dayTemp} current={current} />
     </div>
     
   )
