@@ -11,6 +11,7 @@
   padding-top: 20px;
   padding-bottom: 20px;
   height: 100vh;
+  position: relative;
   background-image:-webkit-linear-gradient(rgb(158,211,218),rgb(204,209,203));
 }
 
