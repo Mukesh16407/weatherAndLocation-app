@@ -6,10 +6,10 @@
     max-width: 100%;
     min-width: 100%;
     margin: auto;
+    margin-top: 1.5rem;
     overflow-y:scroll;
-    border: 1px solid green;
-    min-height: 100vh;
-    max-height: 95vh;
+   
+   
 }
 @media screen and (max-width: 768px) {
     .App {

@@ -58,14 +58,18 @@ export const Day = ({coordinates,setDayTemp,setCurrent}) => {
 
 
 const Wrapper = styled.div`
-    border:1px solid red;
     display: flex;
-    gap: 0.7rem;
-    height: 500px;
-    width: 100%;
+    gap: 0.5rem;
+    width: 99.8%;
+    margin-top: 4.5rem;
+    overflow-x: scroll;
+    &::-webkit-scrollbar {
+    display: none;
+    }
     
 `
 const Box = styled.div`
-    border: 1px solid green;
-    width: 15%;
+    width: 18.8%;
+    
+
 `

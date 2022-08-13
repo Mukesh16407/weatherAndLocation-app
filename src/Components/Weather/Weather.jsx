@@ -47,7 +47,7 @@ const Container = styled.div`
   max-width: 35%;
   min-width: 35%;
   min-height: 95vh;
-  max-width: 95vh;
+  max-height: 95vh;
   border-radius: 0.9rem;
   display: flex;
   flex-direction: column;
@@ -77,7 +77,8 @@ const Box = styled.div`
 
 const Image = styled.img`
   width: 100%;
-  margin-top: 10%;
+  margin-top: 20%;
+  
 `;
 
 const Title = styled.h2`

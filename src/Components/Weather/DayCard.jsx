@@ -16,6 +16,7 @@ export const DayCard = ({dayData}) => {
 
        
     },[dayData])
+   
   return (
     <Box>
         <Title>{dayName}</Title>
@@ -44,6 +45,6 @@ const Box = styled.div`
 `
 const Title = styled.h4``;
 const Logo = styled.img`
-  height: 30px;
+  height: 25px;
   width: 30px;
 `;

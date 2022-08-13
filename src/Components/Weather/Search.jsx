@@ -86,7 +86,7 @@ export const Search = ({city,setCity,coordinates,setCoordinates,setLoading}) => 
                 </Item>
             </Button>
         </Form>
-        {searchData && show == true &&(
+        {searchData && show === true &&(
             <div className='cityList'>
                  <div className='optionBox'>
                  {searchData.map((cty, i)=>{
@@ -109,6 +109,27 @@ const Container = styled.div`
     position: relative;
     margin-top: 1rem;
   }
+  .optionBox {
+    position: absolute;
+    z-index: 500;
+    background-color:white;
+    color: black;
+   
+    transition: 0.3s;
+    width: 100%;
+    max-height: 50vh;
+    overflow-y: auto;
+    border-radius: 0.5rem;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    ::-webkit-scrollbar {
+      width: 10px;
+    }  
+}
+.optionBox>div:hover{
+     background-color: #979494;
+     cursor: pointer;
+     
+}
 
 border-radius: 0.5rem;
 height:2.8rem ;

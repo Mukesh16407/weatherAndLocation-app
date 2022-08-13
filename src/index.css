@@ -8,8 +8,8 @@
 }
 
 body {
-  height: 100vh;
-  
+  min-height: 100vh;
+  max-height: 100vh;  
   background-image:-webkit-linear-gradient(rgb(158,211,218),rgb(204,209,203));
 }
 
