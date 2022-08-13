@@ -1,6 +1,7 @@
 import axios from 'axios';
 import React, { useEffect, useState } from 'react'
 import { useDispatch } from 'react-redux';
+import styled from 'styled-components';
 import {addTemp} from '../../Redux/Action';
 import { DayCard } from './DayCard';
 
@@ -42,15 +43,29 @@ export const Day = ({coordinates,setDayTemp,setCurrent}) => {
     }
     
   return (
-    <div>
+    <Wrapper>
         {weeklyData && weeklyData.map((day, i)=>(
-            <div onClick={()=>showAllData(day,i)} key={i}
+            <Box onClick={()=>showAllData(day,i)} key={i}
             style={{border:selected === i ? "2px solid #373c3f" : "2px solid #e9e9e9",
                 borderRadius: "0.5rem"}}>
                <DayCard dayData={day}/>
-            </div>
+            </Box>
         ))}
         
-    </div>
+    </Wrapper>
   )
 }
+
+
+const Wrapper = styled.div`
+    border:1px solid red;
+    display: flex;
+    gap: 0.7rem;
+    height: 500px;
+    width: 100%;
+    
+`
+const Box = styled.div`
+    border: 1px solid green;
+    width: 15%;
+`

@@ -1,14 +1,25 @@
-body {
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Roboto+Slab:wght@300&display=swap');
+
+*{
+  box-sizing: border-box;
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  
+  font-family: 'Roboto Slab', serif;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  height: 100vh;
+  
+  background-image:-webkit-linear-gradient(rgb(158,211,218),rgb(204,209,203));
 }
+
+
+@media screen and (max-width: 600px) {
+  body {
+    overflow-y: auto;
+    display: block;
+  }
+
+}
+
+

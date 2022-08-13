@@ -1,18 +1,36 @@
-*{
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
 
-.App {
-  text-align: center;
-  display: flex;
- justify-content: space-around;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  height: 100vh;
-  position: relative;
-  background-image:-webkit-linear-gradient(rgb(158,211,218),rgb(204,209,203));
+.App{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    max-width: 100%;
+    min-width: 100%;
+    margin: auto;
+    overflow-y:scroll;
+    border: 1px solid green;
+    min-height: 100vh;
+    max-height: 95vh;
 }
+@media screen and (max-width: 768px) {
+    .App {
+      overflow-y: auto;
+      display: block;
+      max-width: 80%;
+      min-width: 80%;
+      
+      
+    }
+  
+  }
+  @media screen and (max-width: 480px) {
+    .App {
+      overflow-y: auto;
+      display: block;
+      max-width: 100%;
+      min-width: 360px;
+    }
+  
+  }
+
 
 

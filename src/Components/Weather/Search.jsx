@@ -3,8 +3,9 @@ import React, { useEffect, useState } from 'react';
 import { ImLocation, ImSearch } from "react-icons/im";
 import { cities } from '../../Cities';
 import { CityList } from './CityList';
+import styled from "styled-components";
 
-export const Search = ({city,setCity,coordinates,setCoordinates}) => {
+export const Search = ({city,setCity,coordinates,setCoordinates,setLoading}) => {
     
    let id
 
@@ -64,6 +65,7 @@ export const Search = ({city,setCity,coordinates,setCoordinates}) => {
         axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${process.env.REACT_APP_API_KEY}`)
         .then(({data})=>{
             setCity(data.name);
+            setLoading(false);
         }).catch((err)=>{
             console.log(err)
         })
@@ -72,19 +74,19 @@ export const Search = ({city,setCity,coordinates,setCoordinates}) => {
 
 
   return (
-    <div>
-        <form onSubmit={getWeather}>
-            <div>
-                <ImLocation/>
-            </div>
-            <input value={city} placeholder='search...'onChange={handleOnChange}/>
-            <button>
-                <div>
-                <ImSearch/>
-                </div>
-            </button>
-        </form>
-        {searchData && (
+    <Container>
+        <Form onSubmit={getWeather}>
+            <Item>
+                <ImLocation className='uiLocation'/>
+            </Item>
+            <Input value={city} placeholder='search...'onChange={handleOnChange}/>
+            <Button>
+                <Item>
+                <ImSearch className='uiLocation'/>
+                </Item>
+            </Button>
+        </Form>
+        {searchData && show == true &&(
             <div className='cityList'>
                  <div className='optionBox'>
                  {searchData.map((cty, i)=>{
@@ -97,6 +99,60 @@ export const Search = ({city,setCity,coordinates,setCoordinates}) => {
                  </div>
             </div>
         )}
-    </div>
+    </Container>
   )
 }
+
+const Container = styled.div`
+.cityList {
+    width: 100%;
+    position: relative;
+    margin-top: 1rem;
+  }
+
+border-radius: 0.5rem;
+height:2.8rem ;
+margin-top: 0.5rem;
+margin-left: 0.3rem;
+position: fixed;
+width: 33%;
+box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+`
+const Form = styled.form`
+    width:99%;
+    display:flex;
+    align-items: center;
+    margin: auto;
+    height: 98%;
+`
+const Item = styled.div`
+padding: 0.5rem;
+ .uiLocation{
+    font-size: 1.5rem;
+    &:hover{
+        color: #302f2f;
+        cursor: pointer;
+        font-size: 2rem;
+    }
+ }
+`;
+const Input = styled.input`
+    outline: none;
+    width: 90%;
+    height: 100%;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0.2rem;
+    border: none;
+    &:focus{
+    outline: none;
+   }
+   
+`
+const Button = styled.button`
+    border: none;
+    background: none;
+    outline: none;
+   
+    
+`

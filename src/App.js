@@ -1,5 +1,5 @@
 import './App.css'
-import { Map } from './Components/Map/Map';
+import {Map  } from './Components/Map/Map';
 import { Weather } from './Components/Weather/Weather';
 
 
@@ -11,7 +11,7 @@ function App() {
     <div className="App">
      <Weather/>
      <Map/>
-    
+
     </div>
   );
 }
