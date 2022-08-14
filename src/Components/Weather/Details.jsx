@@ -29,9 +29,10 @@ export const Details = ({ dayTemp, current }) => {
           </Box>
           <div>
             <Chart
-              type="line"
+              type="area"
               width="98%"
               height="98%"
+              
               series={[
                 {
                   name: "Temperature",

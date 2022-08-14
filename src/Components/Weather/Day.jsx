@@ -61,7 +61,7 @@ const Wrapper = styled.div`
     display: flex;
     gap: 0.5rem;
     width: 99.8%;
-    margin-top: 4.5rem;
+    margin-top: 0.5rem;
     overflow-x: scroll;
     &::-webkit-scrollbar {
     display: none;

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import styled from "styled-components";
+import suns from '../../assets/suns.png';
 
 export const SunInfo = ({ current }) => {
   const [sunrise, setSunrise] = useState("");
@@ -11,11 +12,10 @@ export const SunInfo = ({ current }) => {
     setSunrise(sunRiseTime.toLocaleTimeString());
 
     let sunset = current.sunset;
-    let sunSettime = new Date(sunset * 1000);
-    setSunset(sunSettime.toLocaleTimeString());
+    let sunSetTime = new Date(sunset * 1000);
+    setSunset(sunSetTime.toLocaleTimeString());
   }, [current]);
 
-  console.log(sunrise, sunset);
   return (
     <Container>
       <Wrapper type="grid">
@@ -37,6 +37,20 @@ export const SunInfo = ({ current }) => {
           <Text state="title">Sunset</Text>
           <Text>{sunset}</Text>
         </Box>
+      </Wrapper>
+      <Wrapper>
+        <Image src={suns} alt="image"/>
+        <Wrapper type="rise">
+          <Box>
+            <Text>5am</Text>
+          </Box>
+          <Box>
+            <Text>1pm</Text>
+          </Box>
+          <Box>
+            <Text>6pm</Text>
+          </Box>
+        </Wrapper>
       </Wrapper>
     </Container>
   );
@@ -62,4 +76,8 @@ const Text = styled.p`
   font-size: 14px;
   
   line-height: 21px;
+`;
+const Image = styled.img`
+  width: 103%;
+  
 `;

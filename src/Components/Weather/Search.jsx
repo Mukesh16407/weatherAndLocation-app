@@ -4,6 +4,7 @@ import { ImLocation, ImSearch } from "react-icons/im";
 import { cities } from '../../Cities';
 import { CityList } from './CityList';
 import styled from "styled-components";
+import { DefaultLocation } from './DefaultLocation';
 
 export const Search = ({city,setCity,coordinates,setCoordinates,setLoading}) => {
     
@@ -23,7 +24,7 @@ export const Search = ({city,setCity,coordinates,setCoordinates,setLoading}) => 
         id=setTimeout(()=>{
       
         let filterData =[];
-        cities.map((el)=>{
+        cities.forEach((el)=>{
             if (el.name.toLocaleLowerCase().includes(e.target.value.toLocaleLowerCase())) {
                 filterData.push(el);
               }
@@ -70,14 +71,17 @@ export const Search = ({city,setCity,coordinates,setCoordinates,setLoading}) => 
             console.log(err)
         })
        }
+        // eslint-disable-next-line
     },[coordinates]);
-
+const currentLocation=()=>{
+    DefaultLocation(setCoordinates);
+}
 
   return (
     <Container>
         <Form onSubmit={getWeather}>
             <Item>
-                <ImLocation className='uiLocation'/>
+                <ImLocation className='uiLocation' onClick={currentLocation}/>
             </Item>
             <Input value={city} placeholder='search...'onChange={handleOnChange}/>
             <Button>
@@ -135,8 +139,8 @@ border-radius: 0.5rem;
 height:2.8rem ;
 margin-top: 0.5rem;
 margin-left: 0.3rem;
-position: fixed;
-width: 33%;
+position: sticky;
+width: 100%;
 box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `
 const Form = styled.form`
