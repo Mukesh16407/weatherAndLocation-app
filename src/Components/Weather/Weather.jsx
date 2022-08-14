@@ -55,7 +55,7 @@ const Container = styled.div`
   border-radius: 0.9rem;
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 0.4rem;
   padding: 0.7rem;
   background: white;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,

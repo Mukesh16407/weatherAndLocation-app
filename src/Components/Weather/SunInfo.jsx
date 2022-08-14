@@ -78,6 +78,7 @@ const Text = styled.p`
   line-height: 21px;
 `;
 const Image = styled.img`
-  width: 103%;
+  width: 100%;
+  height: 5rem;
   
 `;
