@@ -27,7 +27,7 @@ export const Details = ({ dayTemp, current }) => {
               alt={dayTemp.weather}
             />
           </Box>
-          <div>
+          <div >
             <Chart
               type="area"
               width="98%"

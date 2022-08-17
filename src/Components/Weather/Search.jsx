@@ -130,21 +130,22 @@ const Container = styled.div`
     }  
 }
 .optionBox>div:hover{
-     background-color: #979494;
+    
      cursor: pointer;
+     
      
 }
 
 border-radius: 0.5rem;
 height:2.8rem ;
 margin-top: 0.5rem;
-margin-left: 0.3rem;
+
 position: sticky;
 width: 100%;
 box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 `
 const Form = styled.form`
-    width:99%;
+    width:98%;
     display:flex;
     align-items: center;
     margin: auto;

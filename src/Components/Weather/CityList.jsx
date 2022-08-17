@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 export const CityList = ({city, state}) => {
   return (
-    <div className='cityList'>
+    <Container className='cityList'>
         <h4 style={{ color: "#364758", fontSize: "14px",textAlign:"start" }}>
           {city},{" "}
           <span
@@ -13,7 +13,16 @@ export const CityList = ({city, state}) => {
           </span>{" "}
         </h4>
        
-    </div>
+    </Container>
   )
 }
 
+const Container = styled.div`
+  margin-left: 1rem;
+  background: none;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  &:hover{
+    background-color: #d7d5d5;
+  }
+`

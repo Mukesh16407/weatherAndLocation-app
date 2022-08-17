@@ -34,12 +34,12 @@ export const DayCard = ({dayData}) => {
 
 
 const Box = styled.div`
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.7rem;
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
   align-items: center;
-  min-width: max-content;
+  width: max-content;
   cursor: pointer;
   transition: 0.3s;
 `

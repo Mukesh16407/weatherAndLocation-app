@@ -69,7 +69,7 @@ const Wrapper = styled.div`
     
 `
 const Box = styled.div`
-    width: 18.8%;
+    width: 25%;
     
 
 `
