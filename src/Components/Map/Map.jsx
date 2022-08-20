@@ -4,12 +4,12 @@ import styled from 'styled-components'
 
 
 
-export const Map = () => {
+export const Map = ({city}) => {
   
 
   return (
     <Container>
-      map
+       Google map
     </Container>
   )
 }
@@ -17,8 +17,9 @@ export const Map = () => {
 const Container = styled.div`
   width: 45%;
   
-  border: 1px solid red;
+
   
 `
 //let url = `https://www.google.com/maps/embed/v1/place?key=AIzaSyAczp3frE9XCVtwkqgxxwVy_bgOIFAdS9k
 //&q=${city}`;
+

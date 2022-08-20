@@ -5,8 +5,8 @@ import { Details } from "./Details";
 import { Search } from "./Search";
 import Loading from "../../assets/Loading_icon.gif";
 import { DefaultLocation } from "./DefaultLocation";
-export const Weather = () => {
-  const [city, setCity] = useState("");
+export const Weather = ({city,setCity}) => {
+  
   const [coordinates, setCoordinates] = useState({});
   const [dayTemp, setDayTemp] = useState({});
   const [current, setCurrent] = useState({});
